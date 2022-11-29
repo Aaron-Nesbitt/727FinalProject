@@ -9,6 +9,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-1+2
+library(rtweet)
+library(tidyverse)
+library(tidytext)
+library(ggmap)
+library(reader)
 ```
 
+```{r eval=FALSE, include=FALSE}
+musk <- search_tweets(
+  q = "musk Twitter, lang:en",
+  n = 18000,
+  include_rts = FALSE
+)
+```
