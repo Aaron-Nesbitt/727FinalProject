@@ -29,3 +29,8 @@ library(readr)
 musktweetsfinal <- read_csv("C:\\Users\\valen\\Downloads\\musktweetsfinal.csv")
 View(musktweetsfinal)
 ```
+
+```{r}
+musktweetsfinal <- read_csv("C:\\Users\\aanes\\Documents\\musktweetsfinal.csv")
+```
+
