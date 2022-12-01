@@ -38,3 +38,29 @@ Necessary code for Aaron to pull in from his working directory.
 musktweetsfinal <- read_csv("C:\\Users\\aanes\\Documents\\musktweetsfinal.csv")
 ```
 
+
+```{r}
+library(quanteda)
+
+irrelevantWords = c('tesla')
+
+newTweets = data.frame()
+irrelevantTweets = data.frame()
+
+for(i in 1:nrow(musktweetsfinal)){
+  # break up tweet into individual words
+  tweet = musktweetsfinal$text[i]
+  tweet = tolower(tweet)
+  words = tokens(tweet)
+  # if it contains an irrelevant word, put it in the irrelevant data frame
+  if(length(intersect(words[['text1']], irrelevantWords))>0){
+    irrelevantTweets = rbind(irrelevantTweets, musktweetsfinal[i,])
+  }
+  else{
+    newTweets = rbind(newTweets, musktweetsfinal[i,])
+  }
+}
+```
+
+
+
