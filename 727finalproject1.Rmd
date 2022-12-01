@@ -38,7 +38,7 @@ Necessary code for Aaron to pull in from his working directory.
 musktweetsfinal <- read_csv("C:\\Users\\aanes\\Documents\\musktweetsfinal.csv")
 ```
 
-
+Here I am creating a function before sentiment analysis to eliminate tweets with the word tesla.
 ```{r}
 library(quanteda)
 
@@ -60,6 +60,10 @@ for(i in 1:nrow(musktweetsfinal)){
     newTweets = rbind(newTweets, musktweetsfinal[i,])
   }
 }
+```
+
+```{r}
+library(SentimentAnalysis)
 ```
 
 
